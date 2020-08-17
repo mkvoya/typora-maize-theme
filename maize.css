@@ -63,39 +63,65 @@ html {
   font-size: 2rem;
   /* text-align: center; */
 }
-#write h2::before{
-  content: "✔";
+#write h2::before,
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
   font-weight: bold;
   color: #ffb11b;
   margin-right: 4px
 }
-#write h2 {
-  font-size: 1.7rem;
-}
-#write h2 span {
+#write h2 span,
+#write h3 span,
+#write h4 span,
+#write h5 span,
+#write h6 span {
  font-weight: bold;
  color: #333;
  padding: 3px 10px 1px;
 }
-
+#write h2::before{
+  content: ">";
+}
+#write h2 {
+  font-size: 1.7rem;
+}
+#write h3::before{
+  content: ">>";
+}
 #write h3 {
   font-size: 1.5rem;
+}
+#write h4::before{
+  content: ">>>";
 }
 #write h4 {
   font-size: 1.25rem;
 }
+#write h5::before{
+  content: ">>>>";
+}
 #write h5 {
   font-size: 1rem;
+}
+#write h6::before{
+  content: ">>>>>";
 }
 #write h6 {
   font-size: 1rem;
 }
 
+/* TOC */
+#write .md-toc-content {
+  outline: 1px dashed lightgray;
+}
+
 /* 列表 */
 #write ul,
 #write ol {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  /* margin-top: 8px; */
+  /* margin-bottom: 8px; */
   padding-left: 25px;
   color: black;
 }
@@ -104,6 +130,11 @@ html {
 }
 #write ul ul {
   list-style-type: square;
+  margin-top: -0.5em;
+}
+#write ul ul li {
+  margin-top: -0.5em;
+  margin-bottom: -0.5em;
 }
 #write ol {
   list-style-type: decimal;
