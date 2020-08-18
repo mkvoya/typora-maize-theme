@@ -21,6 +21,8 @@
 
 html {
   background-color: #f6f6f6;
+  letter-spacing: 0px;
+  font-family: "Fira Code", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
 }
 #write {
   max-width: 914px;
@@ -122,8 +124,10 @@ html {
 #write ol {
   /* margin-top: 8px; */
   /* margin-bottom: 8px; */
-  padding-left: 25px;
   color: black;
+}
+#write ul  {
+  padding-left: 25px;
 }
 #write ul {
   list-style-type: disc;
