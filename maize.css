@@ -32,6 +32,13 @@ html {
   font-family: "Fira Code", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
+/* Pretext (yaml header) */
+pre.md-meta-block {
+  padding: 1em;
+  background-color: aliceblue;
+  font-family: "Fira Code", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
 /*段落*/
 #write p {
   font-size: 16px;
@@ -64,7 +71,12 @@ html {
 #write h1 {
   font-size: 2rem;
   /* text-align: center; */
+  border-bottom: 1px solid #E49123;
 }
+#write h1::after {
+  border-bottom: 1px solid #E49123;
+}
+#write h1::before,
 #write h2::before,
 #write h3::before,
 #write h4::before,
@@ -74,6 +86,7 @@ html {
   color: #ffb11b;
   margin-right: 4px
 }
+#write h1 span,
 #write h2 span,
 #write h3 span,
 #write h4 span,
@@ -83,32 +96,35 @@ html {
  color: #333;
  padding: 3px 10px 1px;
 }
-#write h2::before{
+#write h1::before{
   content: ">";
+}
+#write h2::before{
+  content: ">>";
 }
 #write h2 {
   font-size: 1.7rem;
 }
 #write h3::before{
-  content: ">>";
+  content: ">>>";
 }
 #write h3 {
   font-size: 1.5rem;
 }
 #write h4::before{
-  content: ">>>";
+  content: ">>>>";
 }
 #write h4 {
   font-size: 1.25rem;
 }
 #write h5::before{
-  content: ">>>>";
+  content: ">>>>>";
 }
 #write h5 {
   font-size: 1rem;
 }
 #write h6::before{
-  content: ">>>>>";
+  content: ">>>>>>";
 }
 #write h6 {
   font-size: 1rem;
